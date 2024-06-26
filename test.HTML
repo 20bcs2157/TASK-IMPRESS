@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.css">
+  <style>
+    body {background-color: rgb(83, 88, 87); margin-left: 40%; margin-top: 10%; }
+    /* Add spacing and padding to table elements */
+   .ant-table {
+      margin: 1%;
+    }
+   .ant-table th,.ant-table td {
+      padding: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>User Management</h1>
+    <form id="user-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      <button type="submit" class="ant-btn ant-btn-primary">Add User</button>
+      <button type="reset" class="ant-btn ant-btn-primary" >Reset</button>
+    </form>
+    <div id="user-table">
+      <table id="user-list" class="ant-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="user-list-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
